@@ -28,6 +28,29 @@ class ClassSelectionScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                /// LOGO + APP NAME
+                Center(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/edu_prompt_logo.png',
+                        height: 70,
+                      ),
+                      const SizedBox(height: 6),
+                      const Text(
+                        "EduPrompt",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 30),
+
                 /// TITLE
                 const Text(
                   "Select Your Class",
@@ -37,7 +60,9 @@ class ClassSelectionScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
+
                 const SizedBox(height: 6),
+
                 const Text(
                   "Choose your current class to continue",
                   style: TextStyle(
@@ -63,8 +88,7 @@ class ClassSelectionScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) =>
-                               Class8ChaptersScreen(),
+                              builder: (_) => Class8ChaptersScreen(),
                             ),
                           );
                         },

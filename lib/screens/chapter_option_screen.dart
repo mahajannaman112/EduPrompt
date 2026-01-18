@@ -43,11 +43,40 @@ class ChapterOptionScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+
+                    /// LOGO + APP NAME
+                    Center(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/edu_prompt_logo.png',
+                            height: 60,
+                          ),
+                          const SizedBox(height: 6),
+                          const Text(
+                            "EduPrompt",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    /// BACK BUTTON
                     IconButton(
                       onPressed: () => Navigator.pop(context),
-                      icon: const Icon(Icons.arrow_back, color: Colors.white),
+                      icon:
+                      const Icon(Icons.arrow_back, color: Colors.white),
                     ),
+
                     const SizedBox(height: 10),
+
+                    /// CHAPTER NAME
                     Text(
                       chapterName,
                       style: const TextStyle(
@@ -56,7 +85,9 @@ class ChapterOptionScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+
                     const SizedBox(height: 6),
+
                     const Text(
                       "Choose how you want to study",
                       style: TextStyle(
@@ -124,8 +155,9 @@ class ChapterOptionScreen extends StatelessWidget {
                           if (questions.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                content:
-                                Text("One-word questions not available"),
+                                content: Text(
+                                  "One-word questions not available",
+                                ),
                               ),
                             );
                             return;

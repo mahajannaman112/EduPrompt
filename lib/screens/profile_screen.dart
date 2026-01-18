@@ -25,6 +25,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                /// LOGO + APP NAME
+                Center(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/edu_prompt_logo.png',
+                        height: 80,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        "EduPrompt",
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 30),
+
                 /// TITLE
                 const Text("Create Profile", style: AppStyles.heading),
                 const SizedBox(height: 6),
@@ -42,8 +65,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Column(
                     children: [
                       _field("Full Name", Icons.person_outline),
-                      _field("Age", Icons.cake_outlined,
-                          keyboard: TextInputType.number),
+                      _field(
+                        "Age",
+                        Icons.cake_outlined,
+                        keyboard: TextInputType.number,
+                      ),
                       _field("School Name", Icons.school_outlined),
                       _field("Mobile Number", Icons.phone_outlined),
                       _field("Email Address", Icons.email_outlined),
@@ -64,7 +90,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => const ClassSelectionScreen(),
+                          builder: (_) =>
+                          const ClassSelectionScreen(),
                         ),
                       );
                     },

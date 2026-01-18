@@ -49,8 +49,33 @@ class Class8ChaptersScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
+                  children: [
+
+                    /// LOGO + APP NAME
+                    Center(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/edu_prompt_logo.png',
+                            height: 60,
+                          ),
+                          const SizedBox(height: 6),
+                          const Text(
+                            "EduPrompt",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    /// TITLE
+                    const Text(
                       "Class 8",
                       style: TextStyle(
                         color: Colors.white,
@@ -58,8 +83,10 @@ class Class8ChaptersScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 6),
-                    Text(
+
+                    const SizedBox(height: 6),
+
+                    const Text(
                       "Science • PSEB",
                       style: TextStyle(
                         color: Colors.white70,
