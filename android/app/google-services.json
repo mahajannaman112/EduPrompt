@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627904777679",
+    "project_id": "eduprompt-41f65",
+    "storage_bucket": "eduprompt-41f65.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627904777679:android:bcf848b13f5849d1a656ba",
+        "android_client_info": {
+          "package_name": "com.example.new_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFoHov04iTfBLaAzrn1mLHxljHWoOrAPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
